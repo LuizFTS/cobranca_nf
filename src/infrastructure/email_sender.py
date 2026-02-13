@@ -93,11 +93,11 @@ class SendEmail:
         else:
             return f"no mês {periodoInicial.strftime('%m/%Y')}"
 
-    def get_dest(self, filial: str) -> list[str]:
+    def get_admins(self, filial: str) -> list[str]:
         """Retorna lista de e-mails dos administradores da filial a partir do arquivo de configuração"""
         return self._config_service.get_store_admins(filial)
 
-    def get_coord(self, filial: str) -> list[str]:
+    def get_coordinators(self, filial: str) -> list[str]:
         """Retorna lista de e-mails dos coordenadores da filial a partir do arquivo de configuração"""
         return self._config_service.get_store_coordinators(filial)
 

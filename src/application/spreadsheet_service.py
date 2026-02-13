@@ -15,7 +15,7 @@ class SpreadsheetService:
     def execute(self, csv_path, output_base):
         """Lê o CSV, gera planilhas por filial e envia e-mails"""
         # Lê o CSV
-        df = pd.read_csv(csv_path, sep=";", encoding="latin1", dtype=str)
+        df = pd.read_csv(csv_path, sep=";", encoding="utf-8", dtype=str)
 
         df.columns = df.columns.str.strip()
 
